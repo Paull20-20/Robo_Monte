@@ -11,6 +11,8 @@ import pathlib
 #from urllib.error import URLError
 
 
+#### O MAIS COMPLETO ATÉ O MOMENTO, falta só unir com os codigos de Lucas e criar as funções para cada ação!
+
 class Robo:
 
     
@@ -40,7 +42,7 @@ class Robo:
         if page.locator('.gb_Ba'):
             print('Já está logado!')
             #clicando na Pasta Teste
-            locator = page.locator('.dPmH0b > div:nth-child(1) > div:nth-child(1)')  
+            locator = page.locator('c-wiz.pmHCK:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)')  
             time.sleep(1)
             locator.focus()
             locator.wait_for() #Faz o script prosseguir somente quando o elemento aparecer
@@ -72,7 +74,7 @@ class Robo:
 
             print('Quantidade de arquivos dentro do diretório: ', numberFile)
 
-            
+
             print('*************---------------***************')
 
             ano = 2020
@@ -176,7 +178,7 @@ class Robo:
                 file = os.path.exists(rf'/home/tiago.oliveira/Área de Trabalho/teste_upload/{ano}teste.pdf')
                 print(file)
                 ano = ano + 1
-
+            
 
             #Comandos para inserir arquivos dentro da devida pasta.
             anoArquivo = 2020
